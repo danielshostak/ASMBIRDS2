@@ -16,6 +16,15 @@ ifnum2 dw 0h
 ifnum3 dw 0h 
 dr db 1h ;0 = LEFT, 1 = RIGHT
 spike_cr db 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
+exit_drw DB 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh),37 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),136 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),112 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),115 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,7 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h)
+        DB 2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,7 dup(0ffh),2 dup(0h),2 dup(0ffh),117 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),14 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),4 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),118 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),2 dup(0h),5 dup(0ffh),11 dup(0h),5 dup(0ffh),5 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),609 dup(0h),6 dup(0ffh),43 dup(0h),4 dup(0ffh),44 dup(0h),6 dup(0ffh),19 dup(0h),4 dup(0ffh),21 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),26 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),41 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),45 dup(0h),2 dup(0ffh),20 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),20 dup(0h)
+        DB 2 dup(0ffh),34 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),6 dup(0h),6 dup(0ffh)
+        DB 3 dup(0h),5 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),6 dup(0ffh),3 dup(0h),3 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),4 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),15 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h)
+        DB 2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),8 dup(0ffh),3 dup(0h),2 dup(0ffh),5 dup(0h),7 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),15 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),7 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h
+        DB 9 dup(0ffh),7 dup(0h),2 dup(0ffh),5 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),17 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),5 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),6 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),11 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h)
+        DB 5 dup(0ffh),12 dup(0h),4 dup(0ffh),3 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),4 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),57 dup(0h),2 dup(0ffh)
+color_bir db 0h
+
 
 CODESEG
 draw proc
@@ -25,27 +34,39 @@ draw proc
         mov al, [si]
         cmp al, 0h
         je skipdraw
-        mov ah, 0Ch
+        mov ah, 0Dh
         mov bh, 0h
         mov cx, [x]
         mov dx, [y]
+        cmp [color_bir], 1h
+        jne if_maybe_bir
         int 10h
-        skipdraw:
-            add [x], 1h
-            add [ifnum1], 1h
-            add [ifnum2], 1h
-            cmp [ifnum1], 0Dh
-            je linedown
-            kd:
-                add si, 1h
-                cmp [ifnum2], 9Ch
-                jne startdraw
-                ret
-        linedown:
-            sub [x], 0Dh
-            add [y], 1h
-            mov [ifnum1], 0h
-            jmp kd
+        cmp al, 14h
+        je exit_game
+        if_maybe_bir:
+            mov ah, 0Ch
+            mov al, [si]
+            int 10h
+            skipdraw:
+                add [x], 1h
+                add [ifnum1], 1h
+                add [ifnum2], 1h
+                cmp [ifnum1], 0Dh
+                je linedown
+                kd:
+                    add si, 1h
+                    cmp [ifnum2], 9Ch
+                    jne startdraw
+                    ret
+            linedown:
+                sub [x], 0Dh
+                add [y], 1h
+                mov [ifnum1], 0h
+                jmp kd
+    jmp exit_game_skip
+    exit_game:
+        jmp exit_game_middle_1
+    exit_game_skip:
 ret
 endp
 
@@ -98,6 +119,11 @@ delay proc
     jnz tick
     ret
 endp
+
+jmp exit_game_middle_1_skip
+exit_game_middle_1:
+    jmp exit_game_middle_2
+exit_game_middle_1_skip:
 
 lt_spk_draw proc
     mov [ifnum3], 0h
@@ -184,6 +210,12 @@ clear13200 proc
         jmp cl13200_ml
 endp
 
+
+jmp exit_game_middle_2_skip
+exit_game_middle_2:
+    jmp exit
+exit_game_middle_2_skip:
+
 start:
     mov ax, @data
     mov ds, ax
@@ -220,12 +252,18 @@ start:
         mov ax, [bir_y]
         mov [y], ax
         call clear1312
+        sub [bir_y], 10h
         after_press:
             mov ax, [bir_x]
             mov [x], ax
             mov ax, [bir_y]
             mov [y], ax
             call clear1312
+            add [bir_y], 8h
+            cmp [bir_y], 0h
+            jle exit_middle_3
+            cmp [bir_y], 195
+            jge exit_middle_3
             cmp [dr], 0h
             je mov_left
             jmp mov_right
@@ -238,7 +276,9 @@ start:
             mov ax, [bir_y]
             mov [y], ax
             mov si, offset bir2
+            mov [color_bir], 1h
             call draw
+            mov [color_bir], 0h
             mov bx, 2h
             call delay
             jmp mainloop
@@ -251,10 +291,16 @@ start:
             mov ax, [bir_y]
             mov [y], ax
             mov si, offset bir1
+            mov [color_bir], 1h
             call draw
+            mov [color_bir], 0h
             mov bx, 2h
             call delay
             jmp mainloop
+        jmp exit_middle_3_skip
+        exit_middle_3:
+            jmp exit
+        exit_middle_3_skip:
         dr_cng:
             mov al, [dr]
             mov ah, al
@@ -279,6 +325,41 @@ start:
             call rt_spk_draw
             jmp mainloop
 exit:
-    mov ax, 4C00h
+mov si, offset exit_drw
+mov [ifnum1], 0h
+mov [ifnum2], 0h
+startdrawexit:
+    mov al, [si]
+    cmp al, 0h
+    je skipdrawexit
+    mov ah, 0Dh
+    mov bh, 0h
+    mov cx, [x]
+    mov dx, [y]
+    cmp [color_bir], 1h
+    jne if_maybe_bir_exit
+    int 10h
+    if_maybe_bir_exit:
+        mov ah, 0Ch
+        mov al, [si]
+        int 10h
+        skipdrawexit:
+            add [x], 1h
+            add [ifnum1], 1h
+            add [ifnum2], 1h
+            cmp [ifnum1], 0B7h
+            je linedown_exit
+            kd_exit:
+                add si, 1h
+                cmp [ifnum2], 0CDEh
+                jne startdrawexit
+                jmp after_draw_exit
+        linedown_exit:
+            sub [x], 0B7h
+            add [y], 1h
+            mov [ifnum1], 0h
+            jmp kd_exit
+    after_draw_exit:
+    mov ah, 4Ch
     int 21h
 END start
