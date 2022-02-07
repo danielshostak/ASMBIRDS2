@@ -1,6 +1,6 @@
 MODEL small
 
-STACK 256h
+STACK 452h
 
 DATASEG
 bir1 db 7 dup(0h),12 dup(0h),5 dup(10h),2 dup(0h),3 dup(10h),2 dup(0h),2 dup(10h),4 dup(0Fh),10h,0h,4 dup(10h),0h,2 dup(10h),2 dup(0Fh),10h,0Fh,10h,0h,7 dup(10h),4 dup(0Fh),2 dup(2Ah),7 dup(10h),3 dup(0Fh),10h,2 dup(0h),10 dup(10h),4 dup(0h),5 dup(10h),4 dup(0Fh),5 dup(0h),3 dup(10h),5 dup(0Fh),4 dup(0h),4 dup(10h),4 dup(0Fh),5 dup(0h),4 dup(10h),3 dup(0Fh),7 dup(0h),2 dup(10h),6 dup(0h)
@@ -9,21 +9,27 @@ lt_spk db 14h,12 dup(0h),14h,14h,11 dup(0h),3 dup(14h),10 dup(0h),4 dup(14h),9 d
 rt_spk db 12 dup(0h),14h,11 dup(0h),2 dup(14h),10 dup(0h),3 dup(14h),9 dup(0h),4 dup(14h),8 dup(0h),5 dup(14h),6 dup(0h),7 dup(14h),6 dup(0h),7 dup(14h),8 dup(0h),5 dup(14h),9 dup(0h),4 dup(14h),10 dup(0h),3 dup(14h),11 dup(0h),2 dup(14h),12 dup(0h),14h
 x dw 0h
 y dw 0h
-bir_x dw 0A0h
+score db 0h
+bir_x dw 098h
 bir_y dw 5Eh
 ifnum1 dw 0h
 ifnum2 dw 0h
-ifnum3 dw 0h 
+ifnum3 dw 0h
 dr db 1h ;0 = LEFT, 1 = RIGHT
 spike_cr db 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
-exit_drw DB 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh),37 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),136 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),112 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),115 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,7 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h)
-        DB 2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,7 dup(0ffh),2 dup(0h),2 dup(0ffh),117 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),14 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),4 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),118 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),2 dup(0h),5 dup(0ffh),11 dup(0h),5 dup(0ffh),5 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),609 dup(0h),6 dup(0ffh),43 dup(0h),4 dup(0ffh),44 dup(0h),6 dup(0ffh),19 dup(0h),4 dup(0ffh),21 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),26 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),41 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),45 dup(0h),2 dup(0ffh),20 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),20 dup(0h)
-        DB 2 dup(0ffh),34 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),6 dup(0h),6 dup(0ffh)
-        DB 3 dup(0h),5 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),6 dup(0ffh),3 dup(0h),3 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),4 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),15 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h)
-        DB 2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),8 dup(0ffh),3 dup(0h),2 dup(0ffh),5 dup(0h),7 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),15 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),7 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h
-        DB 9 dup(0ffh),7 dup(0h),2 dup(0ffh),5 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),17 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),5 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),6 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),11 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h)
-        DB 5 dup(0ffh),12 dup(0h),4 dup(0ffh),3 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),4 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),57 dup(0h),2 dup(0ffh)
 color_bir db 0h
+exit_drw db 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh),37 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),136 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),112 dup(0h),2 dup(0ffh),2 dup(0h)
+         db 3 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),115 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,7 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h)
+         db 2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,7 dup(0ffh),2 dup(0h),2 dup(0ffh),117 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),14 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),4 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),118 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh)
+         db 0h,2 dup(0ffh),2 dup(0h),5 dup(0ffh),11 dup(0h),5 dup(0ffh),5 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),609 dup(0h),6 dup(0ffh),43 dup(0h),4 dup(0ffh),44 dup(0h),6 dup(0ffh),19 dup(0h),4 dup(0ffh),21 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),26 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),41 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),45 dup(0h),2 dup(0ffh),20 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),20 dup(0h)
+         db 2 dup(0ffh),34 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),6 dup(0h),6 dup(0ffh),3 dup(0h),5 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh)
+         db 3 dup(0h),6 dup(0ffh),3 dup(0h),3 dup(0ffh),3 dup(0h),6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),4 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),15 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h)
+         db 2 dup(0ffh),3 dup(0h),2 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h)
+         db 2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),8 dup(0ffh),3 dup(0h),2 dup(0ffh),5 dup(0h),7 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),5 dup(0ffh),15 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),7 dup(0ffh),12 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh)
+         db 9 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h
+         db 9 dup(0ffh),7 dup(0h),2 dup(0ffh),5 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),17 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h)
+         db 2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),5 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),6 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),11 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h)
+         db 5 dup(0ffh),12 dup(0h),4 dup(0ffh),3 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),4 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),57 dup(0h),2 dup(0ffh),125 dup(0h)
 
 
 CODESEG
@@ -43,6 +49,13 @@ draw proc
         int 10h
         cmp al, 14h
         je exit_game
+        cmp al, 4h
+        je add_score
+        jmp add_score_skip
+        add_score:
+            inc [score]
+            call generate_candy
+        add_score_skip:
         if_maybe_bir:
             mov ah, 0Ch
             mov al, [si]
@@ -85,7 +98,7 @@ random_spike proc
         je add_cr
         add si, 1h
         jmp check_spike
-ret
+
     add_cr:
         mov ax, [x]
         mov [si], ax
@@ -98,12 +111,16 @@ ret
 endp
 
 random_number proc
+    push cx
+
     mov ah, 00h
     int 1ah
     mov cx, bx
     mov ax, dx
     mov dx, 0h
     div cx
+
+    pop cx
     ret
 endp
 
@@ -170,7 +187,7 @@ clear1312 proc
         add [x], 1h
         add [ifnum1], 1h
         add [ifnum2], 1h
-        cmp [ifnum2], 9Ch
+        cmp [ifnum2], 1A0h
         jne cl1312_after_check
         ret
         cl1312_after_check:
@@ -216,6 +233,20 @@ exit_game_middle_2:
     jmp exit
 exit_game_middle_2_skip:
 
+generate_candy proc
+    mov cx, 0
+    mov bx, 104h
+    call random_number
+    add dx, 14h
+    mov cx, dx
+    mov bx, 0F0h
+    call random_number
+    mov ah, 0Ch
+    mov al, 04h
+    int 10h
+    ret
+endp
+
 start:
     mov ax, @data
     mov ds, ax
@@ -238,6 +269,7 @@ start:
     call draw
     mov bx, 5h
     call delay
+    call generate_candy
 
     mainloop:
         mov ah, 1h
@@ -251,14 +283,20 @@ start:
         mov [x], ax
         mov ax, [bir_y]
         mov [y], ax
-        call clear1312
         sub [bir_y], 10h
+
+        jmp dr_cng_middle_skip
+        dr_cng_middle:
+            jmp dr_cng
+        dr_cng_middle_skip:
+
         after_press:
             mov ax, [bir_x]
             mov [x], ax
             mov ax, [bir_y]
             mov [y], ax
             call clear1312
+            skip_clear_bird:
             add [bir_y], 8h
             cmp [bir_y], 0h
             jle exit_middle_3
@@ -282,6 +320,7 @@ start:
             mov bx, 2h
             call delay
             jmp mainloop
+        
         mov_right:
             cmp [x], 136h
             jge dr_cng
@@ -314,18 +353,29 @@ start:
             je rt_spk_cng
         lt_spk_cng:
             mov [x],133h
+            mov [bir_x],133h
             mov [y],0h
             call clear13200
             call lt_spk_draw
             jmp mainloop
         rt_spk_cng:
             mov [x],0h
+            mov [bir_x],0h
             mov [y],0h
             call clear13200
             call rt_spk_draw
             jmp mainloop
 exit:
+mov ah, 06h
+xor al, al
+xor cx, cx
+mov dx, 184Fh
+mov bh, 54h
+int 10h
 mov si, offset exit_drw
+mov [x], 44h
+mov [y], 5Bh
+push 0h
 mov [ifnum1], 0h
 mov [ifnum2], 0h
 startdrawexit:
@@ -360,6 +410,21 @@ startdrawexit:
             mov [ifnum1], 0h
             jmp kd_exit
     after_draw_exit:
-    mov ah, 4Ch
-    int 21h
+    mov ah, 0h
+    int 16h
+    cmp ah, 39h
+    jne after_draw_exit
+    mov ah, 06h
+    xor al, al
+    xor cx, cx
+    mov dx, 184Fh
+    mov bh, 54h
+    int 10h
+    mov [bir_x], 098h
+    mov [bir_y], 5Eh
+    mov [dr], 1h
+    mov [color_bir],0h
+    call rt_spk_draw
+    call generate_candy
+    jmp mainloop
 END start
