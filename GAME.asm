@@ -1,6 +1,6 @@
 MODEL small
 
-STACK 452h
+STACK 512h
 
 DATASEG
 bir1 db 7 dup(0h),12 dup(0h),5 dup(10h),2 dup(0h),3 dup(10h),2 dup(0h),2 dup(10h),4 dup(0Fh),10h,0h,4 dup(10h),0h,2 dup(10h),2 dup(0Fh),10h,0Fh,10h,0h,7 dup(10h),4 dup(0Fh),2 dup(2Ah),7 dup(10h),3 dup(0Fh),10h,2 dup(0h),10 dup(10h),4 dup(0h),5 dup(10h),4 dup(0Fh),5 dup(0h),3 dup(10h),5 dup(0Fh),4 dup(0h),4 dup(10h),4 dup(0Fh),5 dup(0h),4 dup(10h),3 dup(0Fh),7 dup(0h),2 dup(10h),6 dup(0h)
@@ -18,6 +18,16 @@ ifnum3 dw 0h
 dr db 1h ;0 = LEFT, 1 = RIGHT
 spike_cr db 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
 color_bir db 0h
+num1 db 14 dup(0h),14 dup(0h),13 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),9 dup(0h),6 dup(0ffh),72 dup(0h)
+num2 db 0h,5 dup(0ffh),7 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),3 dup(0ffh),8 dup(0h),4 dup(0ffh),8 dup(0h),4 dup(0ffh),8 dup(0h),3 dup(0ffh),10 dup(0h),7 dup(0ffh),71 dup(0h)
+num3 db 0h,6 dup(0ffh),10 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),10 dup(0h),4 dup(0ffh),12 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),72 dup(0h)
+num4 db 3 dup(0h),3 dup(0ffh),9 dup(0h),4 dup(0ffh),8 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),7 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),7 dup(0ffh),10 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),72 dup(0h)
+num5 db 6 dup(0ffh),7 dup(0h),13 dup(0h),6 dup(0ffh),12 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),72 dup(0h)
+num6 db 2 dup(0h),4 dup(0ffh),8 dup(0h),12 dup(0h),2 dup(0ffh),11 dup(0h),6 dup(0ffh),7 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),72 dup(0h) 
+num7 db 7 dup(0ffh),6 dup(0h),5 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),74 dup(0h)
+num8 db 0h,4 dup(0ffh),8 dup(0h),2 dup(0ffh),3 dup(0h),0ffh,7 dup(0h),3 dup(0ffh),2 dup(0h),0ffh,8 dup(0h),4 dup(0ffh),8 dup(0h),0ffh,2 dup(0h),4 dup(0ffh),6 dup(0h),0ffh,4 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),72 dup(0h)
+num9 db 0h,5 dup(0ffh),7 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),11 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),8 dup(0h),4 dup(0ffh),73 dup(0h)
+num0 db 2 dup(0h),3 dup(0ffh),9 dup(0h),0ffh,2 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),2 dup(0h),0ffh,9 dup(0h),3 dup(0ffh),73 dup(0h)
 exit_drw db 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh),37 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),136 dup(0h),2 dup(0ffh),7 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),3 dup(0h),5 dup(0ffh),10 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),5 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,3 dup(0ffh),112 dup(0h),2 dup(0ffh),2 dup(0h)
          db 3 dup(0ffh),6 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),3 dup(0ffh),115 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,7 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h)
          db 2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,7 dup(0ffh),2 dup(0h),2 dup(0ffh),117 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,0ffh,0h,2 dup(0ffh),0h,2 dup(0ffh),0h,2 dup(0ffh),14 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),4 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),118 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),0h,0ffh,0h,2 dup(0ffh)
@@ -30,7 +40,8 @@ exit_drw db 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh
          db 9 dup(0ffh),7 dup(0h),2 dup(0ffh),5 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),17 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h)
          db 2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),5 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),6 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),11 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h)
          db 5 dup(0ffh),12 dup(0h),4 dup(0ffh),3 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),4 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),57 dup(0h),2 dup(0ffh),125 dup(0h)
-
+count_yehidot db 0h
+count_asarot db 0h
 
 CODESEG
 draw proc
@@ -112,14 +123,12 @@ endp
 
 random_number proc
     push cx
-
     mov ah, 00h
     int 1ah
     mov cx, bx
     mov ax, dx
     mov dx, 0h
     div cx
-
     pop cx
     ret
 endp
@@ -159,6 +168,15 @@ lt_spk_draw proc
 endp
 
 
+add_asara proc
+    mov [count_yehidot], 0h
+    add [count_asarot], 1h
+    cmp [count_asarot], 0Ah
+    je exit_game_middle_2
+ret
+endp
+
+
 rt_spk_draw proc
     mov [ifnum3], 0h
     mov [x], 133h
@@ -174,6 +192,11 @@ rt_spk_draw proc
         jle rt_spk_ml
         ret
 endp
+
+jmp exit_game_middle_2_skip
+exit_game_middle_2:
+    jmp exit
+exit_game_middle_2_skip:
 
 clear1312 proc
     mov [ifnum1], 0h
@@ -200,6 +223,7 @@ clear1312 proc
         mov [ifnum1], 0h
         jmp cl1312_ml
 endp
+
 
 clear13200 proc
     mov [ifnum1], 0h
@@ -228,10 +252,10 @@ clear13200 proc
 endp
 
 
-jmp exit_game_middle_2_skip
-exit_game_middle_2:
+jmp exit_game_middle_3_skip
+exit_game_middle_3:
     jmp exit
-exit_game_middle_2_skip:
+exit_game_middle_3_skip:
 
 generate_candy proc
     mov cx, 0
@@ -320,7 +344,6 @@ start:
             mov bx, 2h
             call delay
             jmp mainloop
-        
         mov_right:
             cmp [x], 136h
             jge dr_cng
@@ -341,6 +364,68 @@ start:
             jmp exit
         exit_middle_3_skip:
         dr_cng:
+            cmp [count_yehidot], 9h
+            jge draw_9
+            cmp [count_yehidot], 8h
+            jge draw_8
+            cmp [count_yehidot], 7h
+            jge draw_7
+            cmp [count_yehidot], 6h
+            jge draw_6
+            cmp [count_yehidot], 5h
+            jge draw_5
+            cmp [count_yehidot], 4h
+            jge draw_4
+            cmp [count_yehidot], 3h
+            jge draw_3
+            cmp [count_yehidot], 2h
+            jge draw_2
+            cmp [count_yehidot], 1h
+            jge draw_1
+            cmp [count_yehidot], 0h
+            jge draw_0
+            jmp after_yehidot_check
+        draw_0:
+            mov si, offset num0
+            jmp after_yehidot_check
+        draw_1:
+            mov si, offset num1
+            jmp after_yehidot_check
+        draw_2:
+            mov si, offset num2
+            jmp after_yehidot_check
+        draw_3:
+            mov si, offset num3
+            jmp after_yehidot_check
+        draw_4:
+            mov si, offset num4
+            jmp after_yehidot_check
+        draw_5:
+            mov si, offset num5
+            jmp after_yehidot_check
+        draw_6:
+            mov si, offset num6
+            jmp after_yehidot_check
+        draw_7:
+            mov si, offset num7
+            jmp after_yehidot_check
+        draw_8:
+            mov si, offset num8
+            jmp after_yehidot_check
+        draw_9:
+            mov si, offset num9
+        after_yehidot_check:
+            add [count_yehidot], 1h
+            cmp [count_yehidot], 0Ah
+            jne not_10
+            call add_asara
+            not_10:
+            mov [x], 0A0h
+            mov [y], 9h
+            call clear1312
+            mov [x], 0A0h
+            mov [y], 9h
+            call draw
             mov al, [dr]
             mov ah, al
             sub al, ah
@@ -355,7 +440,7 @@ start:
             mov [x],133h
             mov [bir_x],133h
             mov [y],0h
-            call clear13200
+            call clear13200     
             call lt_spk_draw
             jmp mainloop
         rt_spk_cng:
