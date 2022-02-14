@@ -61,7 +61,6 @@ draw proc
         cmp al, 14h
         je exit_game
         cmp al, 4h
-        je add_score
         jmp add_score_skip
         add_score:
             inc [score]
@@ -168,14 +167,6 @@ lt_spk_draw proc
 endp
 
 
-add_asara proc
-    mov [count_yehidot], 0h
-    add [count_asarot], 1h
-    cmp [count_asarot], 0Ah
-    je exit_game_middle_2
-ret
-endp
-
 
 rt_spk_draw proc
     mov [ifnum3], 0h
@@ -251,7 +242,6 @@ clear13200 proc
         jmp cl13200_ml
 endp
 
-
 jmp exit_game_middle_3_skip
 exit_game_middle_3:
     jmp exit
@@ -270,6 +260,7 @@ generate_candy proc
     int 10h
     ret
 endp
+
 
 start:
     mov ax, @data
@@ -311,7 +302,7 @@ start:
 
         jmp dr_cng_middle_skip
         dr_cng_middle:
-            jmp dr_cng
+            jmp direction_cng
         dr_cng_middle_skip:
 
         after_press:
@@ -331,7 +322,7 @@ start:
             jmp mov_right
         mov_left:
             cmp [x], 10h
-            jle dr_cng
+            jle direction_cng
             sub [bir_x], 10h
             mov ax, [bir_x]
             mov [x], ax
@@ -346,7 +337,7 @@ start:
             jmp mainloop
         mov_right:
             cmp [x], 136h
-            jge dr_cng
+            jge direction_cng
             add [bir_x], 10h
             mov ax, [bir_x]
             mov [x], ax
@@ -363,7 +354,7 @@ start:
         exit_middle_3:
             jmp exit
         exit_middle_3_skip:
-        dr_cng:
+        direction_cng:
             cmp [count_yehidot], 9h
             jge draw_9
             cmp [count_yehidot], 8h
@@ -416,16 +407,26 @@ start:
             mov si, offset num9
         after_yehidot_check:
             add [count_yehidot], 1h
-            cmp [count_yehidot], 0Ah
+            cmp [count_yehidot], 0Bh
             jne not_10
-            call add_asara
-            not_10:
+        add_asara:
+            mov [count_yehidot], 0h
+            add [count_asarot], 1h
+            mov [x], 96h
+            mov [y], 9h
+            call clear1312
+            mov [x], 96h
+            mov [y], 9h
+            call draw
+            jmp yehidotcount
+        not_10:
             mov [x], 0A0h
             mov [y], 9h
             call clear1312
             mov [x], 0A0h
             mov [y], 9h
             call draw
+        yehidotcount:
             mov al, [dr]
             mov ah, al
             sub al, ah
@@ -437,16 +438,16 @@ start:
             cmp [dr], 1h
             je rt_spk_cng
         lt_spk_cng:
-            mov [x],133h
-            mov [bir_x],133h
-            mov [y],0h
+            mov [x], 133h
+            mov [bir_x], 133h
+            mov [y], 0h
             call clear13200     
             call lt_spk_draw
             jmp mainloop
         rt_spk_cng:
-            mov [x],0h
-            mov [bir_x],0h
-            mov [y],0h
+            mov [x], 0h
+            mov [bir_x], 0h
+            mov [y], 0h
             call clear13200
             call rt_spk_draw
             jmp mainloop
@@ -463,6 +464,8 @@ mov [y], 5Bh
 push 0h
 mov [ifnum1], 0h
 mov [ifnum2], 0h
+mov [count_yehidot], 0h
+mov [count_asarot], 0h
 startdrawexit:
     mov al, [si]
     cmp al, 0h
