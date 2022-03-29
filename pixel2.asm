@@ -42,21 +42,6 @@ exit_drw db 58 dup(0h),5 dup(0ffh),34 dup(0h),5 dup(0ffh),138 dup(0h),2 dup(0ffh
          db 9 dup(0ffh),7 dup(0h),2 dup(0ffh),5 dup(0h),2 dup(0ffh),11 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),9 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,6 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),6 dup(0h),2 dup(0ffh),17 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),10 dup(0h),2 dup(0ffh),2 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h)
          db 2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),6 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),0h,2 dup(0ffh),5 dup(0h),2 dup(0ffh),7 dup(0h),2 dup(0ffh),6 dup(0h),5 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),11 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),7 dup(0h),6 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),13 dup(0h),2 dup(0ffh),4 dup(0h)
          db 5 dup(0ffh),12 dup(0h),4 dup(0ffh),3 dup(0h),5 dup(0ffh),2 dup(0h),2 dup(0ffh),3 dup(0h),2 dup(0ffh),4 dup(0h),2 dup(0ffh),4 dup(0h),6 dup(0ffh),0h,2 dup(0ffh),3 dup(0h),2 dup(0ffh),2 dup(0h),6 dup(0ffh),2 dup(0h),5 dup(0ffh),57 dup(0h),2 dup(0ffh),125 dup(0h)
-high_score_drw db 11 dup(0ffh), 3 dup(0h), 12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),23 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),23 dup(0ffh),3 dup(0h),12 dup(0ffh)
-               db 3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),15 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),17 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h)
-               db 3 dup(0ffh),12 dup(0h),3 dup(0ffh),9 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),17 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),9 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h)
-               db 12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),23 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),23 dup(0ffh),3 dup(0h)
-               db 12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),23 dup(0ffh),3 dup(0h),10 dup(0ffh),5 dup(0h),3 dup(0ffh),21 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),17 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),9 dup(0h),3 dup(0ffh),11 dup(0h)
-               db 10 dup(0ffh),5 dup(0h),3 dup(0ffh),21 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),17 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),11 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),9 dup(0h),3 dup(0ffh),11 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),11 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h)
-               db 12 dup(0ffh),3 dup(0h),15 dup(0ffh),11 dup(0h),3 dup(0ffh),3 dup(0h),6 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),11 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),15 dup(0ffh),11 dup(0h),3 dup(0ffh),5 dup(0h),4 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),8 dup(0h),12 dup(0ffh),3 dup(0h)
-               db 3 dup(0ffh),11 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),12 dup(0ffh),3 dup(0h),12 dup(0ffh),1067 dup(0h),13 dup(0ffh),3 dup(0h),12 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),53 dup(0h),13 dup(0ffh),3 dup(0h),12 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),14 dup(0h)
-               db 2 dup(0ffh),37 dup(0h),13 dup(0ffh),3 dup(0h),12 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),7 dup(0h),3 dup(0ffh),5 dup(0h),2 dup(0ffh),41 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh)
-               db 7 dup(0h),3 dup(0ffh),6 dup(0h),2 dup(0ffh),40 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),7 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),3 dup(0ffh),5 dup(0h),3 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h)
-               db 3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),17 dup(0h),2 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),11 dup(0ffh),17 dup(0h),2 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),11 dup(0h),3 dup(0ffh),17 dup(0h)
-               db 2 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),11 dup(0ffh),4 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),11 dup(0h),3 dup(0ffh),7 dup(0h),3 dup(0ffh),7 dup(0h),2 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),13 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),12 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),11 dup(0h),3 dup(0ffh),7 dup(0h),3 dup(0ffh),7 dup(0h)
-               db 2 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),12 dup(0ffh),13 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),7 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),39 dup(0h),3 dup(0ffh),8 dup(0h),12 dup(0ffh),13 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),15 dup(0h),3 dup(0ffh),40 dup(0h),3 dup(0ffh),8 dup(0h)
-               db 12 dup(0ffh),13 dup(0h),3 dup(0ffh),12 dup(0h),12 dup(0ffh),3 dup(0h),3 dup(0ffh),6 dup(0h),3 dup(0ffh),3 dup(0h),11 dup(0ffh),14 dup(0h),2 dup(0ffh),0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h,0h
-
 count_yehidot db 0h
 count_asarot db 1h
 NextRandom dw 0h
@@ -282,11 +267,9 @@ endp
 prg proc
     push ax
     xor dx, dx
-
     mov ax, [NextRandom]
     mov dx, 25173
     imul dx
-
     add  ax, 13849
     xor  ax, 62832
     mov [NextRandom], ax
@@ -316,60 +299,16 @@ start:
     int 10h
     call random_number
     mov [NextRandom], dx
-    
-    mov si, offset high_score_drw
-    mov [x], 90
-    mov [y], 80
+    mov [ifnum3], 0h
+    mov ax, [bir_x]
+    mov [x], ax
+    mov ax, [bir_y]
+    mov [y], ax
+    mov si, offset bir1
+    call draw
+    mov bx, 5h
+    call delay
 
-    mov [ifnum1], 0h
-    mov [ifnum2], 0h
-    startdrawhs:
-        mov al, [si]
-        cmp al, 0h
-        je skipdrawhs
-        mov ah, 0Dh
-        mov bh, 0h
-        mov cx, [x]
-        mov dx, [y]
-        cmp [color_bir], 1h
-        jne if_maybe_birhs
-        int 10h
-        cmp al, 4h
-        if_maybe_birhs:
-            mov ah, 0Ch
-            mov al, [si]
-            int 10h
-            skipdrawhs:
-                add [x], 1h
-                add [ifnum1], 1h
-                add [ifnum2], 1h
-                cmp [ifnum1], 150
-                je linedownhs
-                kdhs:
-                    add si, 1h
-                    cmp [ifnum2], 4950
-                    jne startdrawhs
-                    jmp startgame
-            linedownhs:
-                sub [x], 150
-                add [y], 1h
-                mov [ifnum1], 0h
-                jmp kdhs
-
-    startgame:
-        mov ah, 00h
-        int 16h
-        cmp al, ' '
-        je start_mainloop
-        jmp startgame
-    start_mainloop:
-        mov ah, 06h
-        xor al, al
-        xor cx, cx
-        mov dx, 184Fh
-        mov bh, 54h
-        int 10h
-        jmp mainloop
     mainloop:
         mov ah, 1h
         int 16h
@@ -564,8 +503,6 @@ start:
             je level_3
             cmp [count_asarot], 6
             je level_4
-            cmp [count_asarot], 11
-            je restart_game_middle1
             jmp skip_levels
             level_2:
                 mov [speed], 3h
@@ -587,10 +524,6 @@ start:
                 mov [bg_color], 0aah
                 int 10h
                 jmp skip_levels
-            jmp restart_game_middle1_skip
-            restart_game_middle1:
-                jmp restart_game_middle
-            restart_game_middle1_skip:
             level_4:
                 mov [speed], 1h
                 mov ah, 06h
@@ -640,12 +573,6 @@ start:
             call clear13200
             mov [ifnum3], 0h
             jmp mainloop
-
-jmp restart_game_middle_skip
-restart_game_middle:
-    jmp restart_game
-restart_game_middle_skip:
-
 exit:
 mov [speed], 04h
 mov ah, 06h
@@ -701,7 +628,6 @@ startdrawexit:
     int 16h
     cmp ah, 39h
     jne after_draw_exit
-    restart_game:
     mov ah, 06h
     xor al, al
     xor cx, cx
